@@ -7,6 +7,5 @@ class CreateMovies < ActiveRecord::Migration[5.2]
       t.integer :rating
       t.boolean :released
     end
-
   end
 end
