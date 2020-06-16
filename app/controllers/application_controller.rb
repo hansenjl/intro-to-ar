@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
             m.name
         end.join("$$")
 
-        <<-Hello
+        <<-HTML
             <!DOCTYPE html>
             <html>
                 <head>
@@ -18,8 +18,6 @@ class ApplicationController < Sinatra::Base
                      <p>this is our first sinatra app</p>
                 </body>
             </html>
-
-        Hello
-
+        HTML
     end
 end
