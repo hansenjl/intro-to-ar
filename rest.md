@@ -9,15 +9,15 @@
 
 ## Our REST routes for a TODO application:
 
-| Verb | Route| Action|
+| Verb | Route| View|
 |------|------|-------|
-| GET | /todos | index |
-| GET | /todos/:id | show|
-| GET | /todos/new | new |
-| POST | /todos | create |
-| GET | /todos/:id/edit | edit |
-| PUT/PATCH | /todos/:id | update |
-| DELETE | /todos/:id | destroy |
+| GET | /movies | index |  #Get all the movies
+| GET | /movies/:id | show|  #Get 1 movie   '/movies/5'
+| GET | /movies/new | new | #Get the form to make a movie
+| POST | /movies |  | #Create a movie
+| GET | /movies/:id/edit | edit | #Get a form to edit 1 movie
+| PUT/PATCH | /movies/:id |  | #update 1 movie 
+| DELETE | /movies/:id |  | #delete 1 movie
 
 
 # MVC
