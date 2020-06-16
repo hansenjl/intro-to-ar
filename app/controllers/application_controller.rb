@@ -18,8 +18,6 @@ class ApplicationController < Sinatra::Base
                      <p>this is our first sinatra app</p>
                 </body>
             </html>
-
         HTML
-
     end
 end
