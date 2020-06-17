@@ -1,8 +1,8 @@
 class GenreController < ApplicationController
 
-     # 7 RESTful routes for Genres
+   # 7 RESTful routes for Genres
 
-   #shows all the genres
+   #show all the genres
    get '/genres' do
         @genres = Genre.all
         erb :'genres/index'
@@ -15,12 +15,15 @@ class GenreController < ApplicationController
 
    #show 1 genre
    get '/genres/:id' do
-    "show"
+     @genre = Genre.find(params[:id])
+     erb :'genres/show'
    end
 
 
    #edit 1 genre
    get '/genres/:id/edit' do
+     @genre = Genre.find(params[:id])
+     erb :'genres/edit'
    end
 
    #create 1 genre
@@ -32,11 +35,18 @@ class GenreController < ApplicationController
 
    #update 1 genre
    patch '/genres/:id' do
-
+     genre = Genre.find(params[:id])
+     # genre.update(name: params[:name])
+     genre.update(params[:genre]) #only works if you've nested params
+     redirect to "/genres/#{genre.id}"
    end
 
    #delete 1 genre
    delete '/genres/:id' do
+    # genre = Genre.find(params[:id])
+     Genre.destroy(params[:id])
+     # genre.destroy
+     redirect to '/genres'
    end
 
 end
