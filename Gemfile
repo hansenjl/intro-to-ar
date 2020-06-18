@@ -8,6 +8,7 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'require_all'
 gem 'thin'
+gem 'bcrypt'
 
 gem 'bcrypt'
 gem 'tux'
